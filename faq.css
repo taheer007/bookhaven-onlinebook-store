@@ -1,0 +1,165 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #238896
+;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header h1 {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+nav {
+    float: right;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #cfd8dc;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffd700;
+}
+
+/* Main FAQ Section */
+.faq-main {
+    margin-top: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.faq-section h2 {
+    color: #2a526f;
+    margin-bottom: 25px;
+    font-size: 2em;
+    border-bottom: 2px solid #2a526f;
+    padding-bottom: 8px;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.question {
+    font-size: 1.25em;
+    color: #1b3a57;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    font-weight: 600;
+}
+
+.answer {
+    margin-top: 8px;
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Optional: add simple toggle effect */
+.question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #2a526f;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .question::after {
+    content: '−';
+    transform: rotate(180deg);
+}
+
+.faq-item .answer {
+    display: none;
+}
+
+.faq-item.open .answer {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #2a526f;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    nav {
+        float: none;
+        text-align: center;
+        margin: 15px 0;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 0 15px;
+    }
+}
+
+/* Hide all answers by default */
+.faq-item .answer {
+    display: none;
+}
+
+/* Show the answer if the faq-item has the class open */
+.faq-item.open .answer {
+    display: block;
+}
+
+/* Plus sign on question */
+.question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #2a526f;
+    transition: transform 0.3s ease;
+}
+
+/* When open, show minus sign instead */
+.faq-item.open .question::after {
+    content: '−';
+    transform: rotate(180deg);
+}

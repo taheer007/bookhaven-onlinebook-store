@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register - BookHaven</title>
+    <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BookHaven</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html">Catalog</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container register-main">
+        <section class="register-section">
+            <h2>Create Your Account</h2>
+            <form id="registerForm" action="#" method="POST" novalidate>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required />
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required />
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required />
+
+                <button type="submit" class="btn btn--primary">Register</button>
+            </form>
+
+            <p class="login-text">Already have an account? <a href="login.html">Login here</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 BookHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple client-side form validation
+        const registerForm = document.getElementById('registerForm');
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Basic password confirmation check
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (this.checkValidity()) {
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match. Please try again.");
+                    return;
+                }
+                // TODO: Add real registration logic here (API calls etc.)
+                alert('Registration successful! You can now log in.');
+                this.reset();
+                window.location.href = 'login.html'; // Redirect to login page after register
+            } else {
+                this.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>

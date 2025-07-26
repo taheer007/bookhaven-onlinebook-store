@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - BookHaven</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BookHaven</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html">Catalog</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="active">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container login-main">
+        <section class="login-section">
+            <h2>Login to BookHaven</h2>
+            <form id="loginForm" action="#" method="POST" novalidate>
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" name="username" placeholder="Your username or email" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Your password" required />
+
+                <button type="submit" class="btn btn--primary">Login</button>
+            </form>
+
+            <p class="register-text">Don't have an account? <a href="register.html">Register here</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 BookHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple client-side form validation
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if(this.checkValidity()) {
+                // TODO: Add real login logic here
+                alert('Logging in... (This is just a placeholder)');
+                this.reset();
+            } else {
+                this.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>

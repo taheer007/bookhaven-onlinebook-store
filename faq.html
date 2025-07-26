@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAQ - BookHaven</title>
+    <link rel="stylesheet" href="faq.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BookHaven</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="index.html">Catalog</a>
+                <a href="contact.html">Contact</a>
+                <a href="shipping.html">Shipping Info</a>
+                <a href="faq.html" class="active">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container faq-main">
+       <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item">
+        <h3 class="question">How can I place an order?</h3>
+        <p class="answer">
+            You can browse our catalog, add your desired books to the cart, and then proceed to checkout where you can enter your shipping and payment details to complete the order.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">What payment methods do you accept?</h3>
+        <p class="answer">
+            We accept all major credit and debit cards, PayPal, and other secure online payment methods.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">How long does shipping take?</h3>
+        <p class="answer">
+            Standard shipping usually takes 5-7 business days within the US. Please refer to our <a href="shipping.html">Shipping Info</a> page for more details.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">Can I return or exchange an item?</h3>
+        <p class="answer">
+            Yes! We have a 30-day return policy on most items. Please review our <a href="returns.html">Returns Policy</a> for full details on how to initiate a return or exchange.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">How do I track my order?</h3>
+        <p class="answer">
+            Once your order ships, you will receive a confirmation email with a tracking number. You can use this to track your package online via the carrier’s website.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 class="question">What if my order arrives damaged?</h3>
+        <p class="answer">
+            Please contact our customer service team within 7 days of delivery with photos of the damaged item. We’ll assist you with a replacement or refund.
+        </p>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 BookHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+    document.querySelectorAll('.faq-item .question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>
